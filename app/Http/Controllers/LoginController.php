@@ -26,14 +26,14 @@ class LoginController extends Controller
         //cek dalam database
         $ada = Answer1::where('id',$id)->first();
         if($ada){
-            return redirect('/cbt/'.$id.'/61');
+            return redirect('/cbt/'.$id.'/81');
         }else{
             $ids = DB::table('users')->where(['id' => $id])->first();
                 if($ids){
                     $answer1 = new Answer1;
                     $answer1->id = request()->input('id');
                     $answer1->save();
-                    return redirect('/cbt/'.$id.'/61');
+                    return redirect('/cbt/'.$id.'/81');
                 }else{
                     return redirect()->back()->with('failed','Login gagal');
                 }

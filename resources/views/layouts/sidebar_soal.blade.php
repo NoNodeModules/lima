@@ -23,7 +23,7 @@
                           $sudah_terjawab = DB::table('answers2')->where('id',$id)->first();
                       @endphp
                       {{-- {{$sudah_terjawab->n1}} --}}
-                      @for ($i = 61; $i < 81; $i++)
+                      @for ($i = 81; $i < 91; $i++)
                       @php
                           $nomor_urut = 'n'.$i;
                       @endphp
